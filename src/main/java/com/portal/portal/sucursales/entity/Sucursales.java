@@ -1,11 +1,11 @@
 package com.portal.portal.sucursales.entity;
 
+import com.portal.portal.region.entity.Region;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @AllArgsConstructor
