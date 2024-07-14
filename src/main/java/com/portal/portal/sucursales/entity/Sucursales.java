@@ -12,11 +12,10 @@ import org.springframework.boot.autoconfigure.web.WebProperties;
 @Getter
 @Setter
 @NoArgsConstructor
+@Table(name = "suc_sucursales")
 public class Sucursales {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String descripcion;
-    @ManyToOne
-    private Region region;
 }

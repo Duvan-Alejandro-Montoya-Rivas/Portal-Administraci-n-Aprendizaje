@@ -1,20 +1,18 @@
 package com.portal.portal.usuario.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(name = "use_user")
 @Getter
 @Setter
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private String email;
