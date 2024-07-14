@@ -1,4 +1,4 @@
-package com.portal.portal.Entity;
+package com.portal.portal.usuario.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
