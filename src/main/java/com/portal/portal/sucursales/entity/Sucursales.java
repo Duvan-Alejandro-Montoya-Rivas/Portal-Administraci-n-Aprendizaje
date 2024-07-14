@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.web.WebProperties;
 @AllArgsConstructor
 @Getter
 @Setter
+@Table(name = "suc_sucursales")
 @NoArgsConstructor
 public class Sucursales {
     @Id
