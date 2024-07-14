@@ -1,23 +1,21 @@
-package com.portal.portal.sucursales.entity;
+package com.portal.portal.region.entity;
 
+import com.portal.portal.sucursales.entity.Sucursales;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
-@AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "suc_sucursales")
+@AllArgsConstructor
 @NoArgsConstructor
-public class Sucursales {
+public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String descripcion;
-    @ManyToOne
-    private Region region;
+    private int estado;
 }

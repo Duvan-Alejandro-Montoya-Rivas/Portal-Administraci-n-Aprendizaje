@@ -37,4 +37,16 @@ public class SucursalesController {
         sucursalesService.deleteSucursales(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Sucursales> updateSucursales(@PathVariable long id, @RequestBody Sucursales sucursalesDetails) {
+        Sucursales updatedSucursales = sucursalesService.updateSucursales(id, sucursalesDetails);
+        if (updatedSucursales != null) {
+            return new ResponseEntity<>(updatedSucursales, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
 }
