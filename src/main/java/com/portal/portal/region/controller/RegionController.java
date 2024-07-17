@@ -35,7 +35,7 @@ public class RegionController {
         }
 
         @PutMapping("/{id}")
-        public ResponseEntity<Region> updateRegion(@PathVariable Long id, @RequestBody Region regionDetails) {
+        public ResponseEntity<Region> updateRegion(@PathVariable  ("id") long id, @RequestBody Region regionDetails) {
             Region updatedRegion = regionService.updateRegion(id, regionDetails);
             if (updatedRegion != null) {
                 return new ResponseEntity<>(updatedRegion, HttpStatus.OK);
